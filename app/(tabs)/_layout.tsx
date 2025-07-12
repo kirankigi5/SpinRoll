@@ -29,15 +29,46 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Dice',
+          tabBarIcon: ({ color, focused }) => (
+            <IconSymbol size={28} name={focused ? 'dice.fill' : 'dice'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="number-generator"
+        options={{
+          title: 'Numbers',
+          tabBarIcon: ({ color, focused }) => (
+            <IconSymbol size={28} name={focused ? 'number.circle.fill' : 'number.circle'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="name-picker"
+        options={{
+          title: 'Names',
+          tabBarIcon: ({ color, focused }) => (
+            <IconSymbol size={28} name={focused ? 'person.2.fill' : 'person.2'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="spinner"
+        options={{
+          title: 'Spinner',
+          tabBarIcon: ({ color, focused }) => (
+            <IconSymbol size={28} name={focused ? 'arrow.triangle.2.circlepath' : 'arrow.triangle.2.circlepath'} color={color} />
+          ),
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Settings',
+          tabBarIcon: ({ color, focused }) => (
+            <IconSymbol size={28} name={focused ? 'gearshape.fill' : 'gearshape'} color={color} />
+          ),
         }}
       />
     </Tabs>
